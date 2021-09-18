@@ -4,6 +4,9 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content;
 }
 
 ol,
@@ -30,4 +33,83 @@ img {
   border: 0;
 
   clip: rect(0 0 0 0);
+}
+
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 5px solid #0500FF;
+}
+
+.header__nav {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.header__burger {
+  padding: 0;
+  background-image: url("../images/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 33px;
+  height: 20px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.main-menu {
+  display: none;
+  position: absolute;
+  padding: 38px 76px 38px 38px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0500FF;
+  z-index: 9999;
+}
+
+.main-menu__title {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-menu__close {
+  position: absolute;
+  top: 23px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url('../images/cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none
+}
+
+.main-menu__list {
+  margin-top: 104px;
+}
+
+.main-menu__item {
+  margin-bottom: 56px;
+  text-align: right;
+}
+
+.main-menu__link {
+  color: #fff;
+  text-decoration: none;
 }

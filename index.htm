@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
-
 </head>
 
 <body>
@@ -21,12 +20,17 @@
       <a class="header__logo" href="/">
         <img src="images/logo.png" alt="logo" width="126" height="23">
       </a>
-      <ul class="main-menu">
-        <li class="main-menu__item"><a class="main-menu__link" href="/">_посты</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="/">_категории</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="/">_полезное</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="/">_обо мне</a></li>
-      </ul>
+      <button class="header__burger" type="button" aria-label="открыть меню"></button>
+      <div class="main-menu">
+        <p class="main-menu__title">> меню</p>
+        <button class="main-menu__close" type="button" aria-label="закрыть меню"></button>
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a class="main-menu__link" href="/">_посты</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="/">_категории</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="/">_полезное</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="/">_обо мне</a></li>
+        </ul>
+      </div>
     </nav>
     <ul class="social-menu">
       <li class="social-menu__item"><a class="social-menu__link" href="/" aria-label="vk"></a></li>
