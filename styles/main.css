@@ -70,9 +70,10 @@ img {
 }
 
 .main-menu {
-  display: none;
+  display: none; /* grid; */ 
+  grid-template-rows: min-content 1fr min-content;
   position: absolute;
-  padding: 38px 76px 38px 38px;
+  padding: 38px;
   top: 0;
   left: 0;
   width: 100vw;
@@ -84,6 +85,7 @@ img {
 .main-menu__title {
   color: #fff;
   font-weight: 700;
+  padding-right: 76px;
   margin: 0;
 }
 
@@ -102,6 +104,7 @@ img {
 
 .main-menu__list {
   margin-top: 104px;
+  padding-right: 76px;
 }
 
 .main-menu__item {
@@ -112,4 +115,127 @@ img {
 .main-menu__link {
   color: #fff;
   text-decoration: none;
+  font-weight: 700;
+}
+
+.social-menu {
+  display: flex;
+  margin: 0 auto;
+  width: 189px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-menu__link {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-menu__link--instagram {
+  background-image: url('../images/instagram.svg');
+} 
+
+.social-menu__link--vk {
+  background-image: url('../images/vk.svg');
+} 
+
+.social-menu__link--twitter {
+  background-image: url('../images/twitter.svg');
+} 
+
+.social-menu__link--youtube {
+  background-image: url('../images/youtube.svg');
+} 
+
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    display: block;
+    padding: 32px 78px;
+  }
+
+  .header__logo {
+    display: block;
+    text-align: center;
+    margin: 0 auto 43px;
+  }
+  .main-menu {
+    display: block;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .main-menu__title {
+    display: none;
+  }
+  .main-menu__close {
+    display: none;
+  }
+
+  .main-menu__list {
+    width: 475px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #0500FF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main-menu__item {
+    margin: 0;
+  }
+
+  .social-menu {
+    margin: 31px auto;
+  }
+
+  .social-menu__link--instagram {
+    background-image: url('../images/instagram-blue.svg');
+  } 
+  
+  .social-menu__link--vk {
+    background-image: url('../images/vk-blue.svg');
+  } 
+  
+  .social-menu__link--twitter {
+    background-image: url('../images/twitter-blue.svg');
+  } 
+  
+  .social-menu__link--youtube {
+    background-image: url('../images/youtube-blue.svg');
+  }
+}
+
+@media (min-width: 1100px) {
+  .header__nav {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 38px 38px 31px;
+  }
+
+  .header__logo {
+    margin: 0;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .social-menu {
+    margin: 0;
+  }
 }
